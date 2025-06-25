@@ -5,7 +5,7 @@ load_dotenv()
 
 client = OpenAI()
 
-text = "dog chases cat"
+text = "dog chases rohit"
 
 response = client.embeddings.create(
     model="text-embedding-3-small",
