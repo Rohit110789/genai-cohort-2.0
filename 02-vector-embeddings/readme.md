@@ -64,3 +64,44 @@ so wheen the token array hits the transformer.. to the transformer, it does not 
 The attention mechanism in transformers looks at all tokens at once, using matrix operations.
 There’s no built-in left-to-right or sequential structure.
 
+**********
+
+
+| Input Type                   | Output Type | Shape       |
+| ---------------------------- | ----------- | ----------- |
+| `"dog chases rohit"`         | Vector      | `(1536,)`   |
+| `["dog", "chases", "rohit"]` | Matrix      | `(3, 1536)` |
+
+
+*************
+
+self attention..
+single head attention is letting the vector embeddings talk to each other...
+
+🧠 Use Case:
+You're typing:
+
+"I had a cup of"
+
+Your phone suggests:
+
+"coffee", "tea", or "water"
+
+🧩 How attention helps:
+Each word you typed ("I", "had", "a", "cup", "of") has an embedding.
+
+The attention mechanism looks at the whole sentence to guess what’s most relevant next.
+The word “cup” pays attention to “of” and “had” more than “I”.
+
+📌 Embeddings talk: The attention mechanism lets "cup" realize it’s about a drink, not just any "cup".
+
+*************
+
+training phase of a model, back propagation to train and get correct output, after corrections on weigtage, may be multiple times, to actually get to an output.
+loss is calculated from actual - predicred output.. and then that loss is made less and less until it becomes 0 and then the model is trained.
+this is how the fine tuning is done and LLMs are made.
+
+inference phase, no back propagation.
+
+
+****

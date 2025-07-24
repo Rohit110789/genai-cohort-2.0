@@ -2,7 +2,7 @@
 
 from dotenv import load_dotenv
 # from openai import OpenAI
-from langfuse.openai import OpenAI
+from openai import OpenAI
 
 load_dotenv()
 
@@ -24,7 +24,7 @@ response = client.chat.completions.create(
         {"role": "assistant", "content": "Hey Piyush! If you have any Python questions or need help with code, feel free to ask!"},
         {"role": "user", "content": "How to make a chai or tea without milk?"},
         {"role": "assistant", "content": "Hey Piyush, I’m here to help with Python, not making tea! If you want help brewing some Python code instead, just ask!"},
-        {"role": "user", "content": "How to write a code in python to add two numbers"},
+        {"role": "user", "content": "How to write a code in python to square and sum two numbers"},
     ]
 )
 
